@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    {% block title%}{% endblock %}
+</head>
+<body>
+    <header>
+        {% include "model-header.html" %}
+    </header>
+    
+    {% block content %}{% endblock %}
+    
+    <footer>
+        {% include "model-footer.html"%}
+    </footer>
+</body>
+</html>

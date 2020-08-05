@@ -1,0 +1,8 @@
+header{
+    display: flex;
+    background-color: darkslategrey;
+    color: wheat;
+}
+header h1{
+    margin: 24px auto;
+}
