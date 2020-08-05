@@ -1,3 +1,5 @@
+# Arquivo padrão, não mexer
+
 """
 ASGI config for agenda_django project.
 

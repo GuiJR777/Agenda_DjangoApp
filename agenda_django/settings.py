@@ -1,3 +1,5 @@
+# Arquivo padrão, apenas add apps em INSTALLED_APPS
+
 """
 Django settings for agenda_django project.
 
@@ -29,6 +31,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+#Adicionar os apps aqui
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core'
 ]
 
 MIDDLEWARE = [
