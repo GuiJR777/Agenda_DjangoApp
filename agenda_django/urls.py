@@ -18,11 +18,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('agenda/', views.agenda ),
+    path('agenda/evento/', views.new_event ),
+    path('agenda/evento/submit', views.submit_new_event ),
     path('login/', views.login_user ),
     path('logout/', views.logout_user ),
     path('login/submit', views.submit_login )
