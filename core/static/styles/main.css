@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f5;
+    
+}
+header{
+    display: flex;
+    background-color: darkslategrey;
+    color: white;
+    text-align: center;
+}
+header h1{
+    margin: 24px auto;
+}
+
+header .sair{
+    margin: 24px 0;
+}
+header .sair a{
+    padding-right: 24px;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: color 700ms;
+    font-size: 16px;
+    line-height: 26px;
+}
+header a:hover{
+    color: yellowgreen;
+    transition: color 700ms;
+}
+
+/* home */
+
+.welcome{ 
+    text-align: center;
+    height: 420px;
+}
+.welcome h2{
+    margin: 120px  0;
+}
+.welcome button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    transition: color 700ms;
+}
+.welcome button:hover{
+    background-color: yellowgreen;
+    transition: color 700ms;
+}
+
+/* login */
+
+.login{
+    text-align: center;
+    min-height: 450px;
+}
+.login h3{
+    margin: 48px 0;
+}
+.login .input{
+    margin: 0 auto;
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.login .input label{
+    line-height: 26px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+.login .input input{
+    text-align: center;
+    max-height: 26px;
+    background-color: white;
+    border: solid 1px black;
+}
+
+.login button{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    transition: color 700ms;
+}
+.login button:hover{
+    background-color: yellowgreen;
+    transition: color 700ms;
+}
+
+/* agenda */
+
+
+.content h2{
+    margin: 48px 0 48px 200px;
+}
+.content .eventos{
+    margin-left: 200px;
+    
+}
+.content .eventos h3{
+    margin: 24px 0;
+}
+.content .eventos ul{
+    margin: 0 0 16px 50px;
+}
+
+.content .eventos button{
+    margin-left: 16px;
+    margin-top: 16px;
+    width: 100px;
+    height: 26px;
+    color: white;
+    background-color: green;
+    border-radius: 16px;
+    transition: color 700ms;
+}
+.content .eventos button:hover{
+    background-color: yellowgreen;
+    transition: color 700ms;
+}
+.content button{
+    margin: 0 0 100px 200px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: green;
+    border-radius: 8px;
+    transition: color 700ms;
+}
+.content button:hover{
+    background-color: yellowgreen;
+    transition: color 700ms;
+}
+
+/* new event */
+
+.content .new_e{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    background-color: darkslategrey;
+    color: wheat;
+}
+footer h3{
+    padding: 20px 0;
+}

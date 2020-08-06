@@ -5,19 +5,29 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Bem vindo {{ user }} estes são seus agendamentos</h2>
+    <div class="content">
+        <h2>Bem vindo {{ user }} estes são seus agendamentos</h2>
 
-    {% for evento in eventos %}
-        <div>
-            <h3>{{ evento.titulo }}</h3>
-            <ul>
-                <li>A ser realizado no dia: {{ evento.converte_data_evento}}</li>
-                <li>Descrição: {{ evento.descricao }}</li>
-            </ul>
-        </div>
-    {% endfor %}
-    <br>
-    <a href="evento/">
-        <button>Novo Evento</button>
-    </a>
+        {% for evento in eventos %}
+            <div class="eventos">
+                <h3>{{ evento.titulo }}</h3>
+                <ul>
+                    <li>A ser realizado no dia: {{ evento.converte_data_evento}}</li>
+                    <li>Descrição: {{ evento.descricao }}</li>
+                    <li>Onde: {{ evento.local }}</li>
+                    <a href="#">
+                        <button>Editar</button>
+                    </a>
+                    <a href="evento/delete/{{ evento.id }}">
+                        <button>Excluir</button>
+                    </a>
+                </ul>
+            </div>
+        {% endfor %}
+        <br>
+        <a href="evento/">
+            <button>Novo Evento</button>
+        </a>
+    </div>
+    
 {% endblock %}

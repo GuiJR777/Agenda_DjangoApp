@@ -7,19 +7,21 @@
 {% block content %}
 
     <form action="submit" method="POST" aling='center'>{% csrf_token %}
-        <div align="center">
-            <h2>Faça login para acessar sua agenda!</h2>
-            <label>Usuario:</label>
-            <input type="text" name="username">
-            <br>
-            <label>Senha:</label>
-            <input type="password" name="userpassword">
-            <br>
+        <div class="login">
+            <h3>Faça login para acessar sua agenda!</h3>
+            <div class="input">
+                <label>Usuario:</label>
+                <input type="text" name="username">
+            </div>
+            <div class="input">
+                <label>Senha:</label>
+                <input type="password" name="userpassword">
+            </div>       
             <button type="submit">Entrar</button>  
         </div>      
     </form>
     {% for message in messages %}
-    <div align="center">
+    <div align="center" class="error">
         {{ message }}
     </div>
     {% endfor %}
