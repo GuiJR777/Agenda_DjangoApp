@@ -12,7 +12,7 @@ body{
 }
 header{
     display: flex;
-    background-color: darkslategrey;
+    background-color: #0C4B33;
     color: white;
     text-align: center;
 }
@@ -154,8 +154,8 @@ header a:hover{
 
 footer{
     text-align: center;
-    background-color: darkslategrey;
-    color: wheat;
+    background-color: #0C4B33;
+    color: white;
 }
 footer h3{
     padding: 20px 0;

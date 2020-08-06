@@ -40,7 +40,11 @@ def agenda(request):
 
 @login_required(login_url='/login/')
 def new_event(request):
-    return render(request, 'new_event.html')
+    id_evento= request.GET.get('id')
+    dados= {}
+    if id_evento:
+        dados['evento']=Evento.objects.get(id=id_evento)
+    return render(request, 'new_event.html', dados)
 
 @login_required(login_url='/login/')
 def submit_new_event(request):
@@ -50,7 +54,18 @@ def submit_new_event(request):
         descricao= request.POST.get('descricao')
         local= request.POST.get('local')
         usuario= request.user
-        Evento.objects.create(titulo=titulo, data_evento=data_evento, descricao=descricao, usuario=usuario, local=local)
+        id_evento= request.POST.get('id_evento')
+        if id_evento:
+            evento= Evento.objects.get(id=id_evento)
+            if evento.usuario==usuario:
+                evento.titulo=titulo
+                evento.data_evento=data_evento
+                evento.descricao=descricao
+                evento.local=local
+                evento.save()
+                
+        else:
+            Evento.objects.create(titulo=titulo, data_evento=data_evento, descricao=descricao, usuario=usuario, local=local)
     
     return redirect('/agenda/')
 

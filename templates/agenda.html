@@ -15,7 +15,7 @@
                     <li>A ser realizado no dia: {{ evento.converte_data_evento}}</li>
                     <li>Descrição: {{ evento.descricao }}</li>
                     <li>Onde: {{ evento.local }}</li>
-                    <a href="#">
+                    <a href="evento/?id={{ evento.id }}">
                         <button>Editar</button>
                     </a>
                     <a href="evento/delete/{{ evento.id }}">
